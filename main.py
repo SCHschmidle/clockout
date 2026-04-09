@@ -14,16 +14,18 @@ class Item(BaseModel):
 
 
 api = FastAPI()
+origins = [
+    "https://www.clockout.ch",
+    "https://clockout.ch",
+    "http://localhost:5371",
+]
+
 api.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "https://clockout.ch",
-        "https://www.clockout.ch",
-    ],  # Hier dein Frontend erlauben
+    allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Erlaubt GET, POST, etc.
+    allow_headers=["*"],  # Erlaubt alle Header
 )
 path = "ocr_img.png"
 @api.post("/process-img")
