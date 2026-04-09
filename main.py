@@ -19,6 +19,7 @@ api.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "https://clockout.ch",
+        "https://www.clockout.ch",
     ],  # Hier dein Frontend erlauben
     allow_credentials=True,
     allow_methods=["*"],
