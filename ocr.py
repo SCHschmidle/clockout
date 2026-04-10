@@ -30,7 +30,7 @@ def OCR_clipboard_image(image_path):
     zeiten = re.findall(r'\b([012]?\d)\s*:\s*([0-5]\d)\b', text)
     formatted_zeiten = [f"{h.zfill(2)}:{m}" for h, m in zeiten]
 
-    tz = timezone(timedelta(hours=1))
+    tz = timezone(timedelta(hours=0))
     heute = date.today()
 
     formatted_zeiten = [
