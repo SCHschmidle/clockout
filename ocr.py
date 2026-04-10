@@ -25,10 +25,9 @@ def OCR_clipboard_image(image_path):
     text = ' '.join(text)
 
     text = re.sub(r'[.,;]', ':', text)
-    text = re.sub(r'(\d)\s+(\d)', r'\1\2', text)
     text = re.sub(r'\s*:\s*', ':', text)
 
-    zeiten = re.findall(r'\b([012]?\d):([0-5]\d)\b', text)
+    zeiten = re.findall(r'\b([012]?\d)\s*:\s*([0-5]\d)\b', text)
     formatted_zeiten = [f"{h.zfill(2)}:{m}" for h, m in zeiten]
 
     tz = timezone(timedelta(hours=1))
