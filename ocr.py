@@ -1,3 +1,4 @@
+from zoneinfo import ZoneInfo
 from PIL import ImageGrab, Image
 import os
 import easyocr
@@ -30,7 +31,7 @@ def OCR_clipboard_image(image_path):
     zeiten = re.findall(r'\b([012]?\d)\s*:\s*([0-5]\d)\b', text)
     formatted_zeiten = [f"{h.zfill(2)}:{m}" for h, m in zeiten]
 
-    tz = timezone(timedelta(hours=0))
+    tz = ZoneInfo("Europe/Berlin")
     heute = date.today()
 
     formatted_zeiten = [
