@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from get_menus import get_menus
-from func import get_end_times
+from python_backend.get_menus import get_menus
+from python_backend.func import get_end_times
 from datetime import datetime, timedelta
-from ocr import OCR_clipboard_image
+from python_backend.ocr import OCR_clipboard_image
 from pydantic import BaseModel
 import httpx
 import base64
