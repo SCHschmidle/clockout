@@ -51,7 +51,12 @@ async def menus():
 # API Endpoint to get transport data
 @api.get("/transport/{target_location}")
 async def get_transport_data(target_location:str, end_time:datetime, walking_time: timedelta | None = 0, minus_time:timedelta | None = 0):
-    
+    """Get transport data from Buchrain to target_location at end_time + walking_time - minus_time
+    Args:
+        target_location (str): Target location for transport data eg. Luzern
+        end_time (datetime): End time of work for transport data eg. XXX
+        walking_time (timedelta, optional): Walking time to Trainstation. Defaults to 0. 
+        minus_time (timedelta, optional): how much time the user allows to go befor the target time. Defaults to 0."""
 
     # Verbindungen abfragen
     async with httpx.AsyncClient(verify=False) as client:
