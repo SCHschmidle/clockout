@@ -153,10 +153,10 @@ async function convertToBase64(): Promise<ProcessResponse | null> {
 
         <main class="card">
             <header class="hero">
-                <p class="eyebrow">Clockout Assistant</p>
-                <h2>Modern file processing with a blue interface</h2>
+                <p class="eyebrow">Clockout</p>
+                <h2>Wann kannst du heute gehen?</h2>
                 <p class="subtitle">
-                    Paste or upload a file, send it to the backend and get the calculated clock-out time back in a clean, readable view.
+                    Lade einen Screenshot deiner Stempeluhr hoch – Clockout berechnet automatisch deine Ausgangszeit.
                 </p>
             </header>
 
