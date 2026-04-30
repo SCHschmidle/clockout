@@ -59,27 +59,7 @@ body {
 }
 
 .page-glow {
-    position: absolute;
-    width: 520px;
-    height: 520px;
-    border-radius: 50%;
-    filter: blur(110px);
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.35;
-}
-
-.page-glow-left {
-    background: radial-gradient(circle, #1a4fd6 0%, transparent 70%);
-    top: -80px;
-    left: -140px;
-}
-
-.page-glow-right {
-    background: radial-gradient(circle, #0e3aab 0%, transparent 70%);
-    bottom: -100px;
-    right: -120px;
-    opacity: 0.25;
+    display: none;
 }
 
 /* ── Card ── */
@@ -258,10 +238,7 @@ body {
     font-weight: 700;
     letter-spacing: -0.04em;
     font-variant-numeric: tabular-nums;
-    background: linear-gradient(135deg, #93c5fd 0%, #3b82f6 50%, #2563eb 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--blue-light);
     line-height: 1.1;
     filter: drop-shadow(0 0 18px rgba(59, 130, 246, 0.4));
 }
